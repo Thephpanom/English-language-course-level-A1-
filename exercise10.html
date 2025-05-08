@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 10: Health</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #388e3c;
+    }
+    .exercise-box {
+      background: #c8e6c9;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+  
+  <div class="container">
+    <h1>Exercise 10: Health</h1>
+    <p><strong>Lao:</strong> ຝຶກຫັດບົດທີ 10: ສຸຂະພາບ</p>
+
+    <div class="exercise-box">
+      <h2>Match the English phrases with the correct Lao translation:</h2>
+
+      <div>
+        <p>1. How are you?</p>
+        <select id="q1">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ເຈົ້າສະບາຍດີບໍ?</option>
+          <option value="wrong">ຂ້ອຍມີອາການວິນຫົວ</option>
+          <option value="wrong2">ຂ້ອຍຮູ້ສຶກບໍ່ດີ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>2. I feel sick</p>
+        <select id="q2">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong">ເຈົ້າສະບາຍດີບໍ?</option>
+          <option value="correct">ຂ້ອຍຮູ້ສຶກບໍ່ດີ</option>
+          <option value="wrong2">ເຈົ້າຕ້ອງການພັກຜ່ອນ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>3. I have a headache</p>
+        <select id="q3">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong">ຂ້ອຍຮູ້ສຶກບໍ່ສະບາຍ</option>
+          <option value="correct">ຂ້ອຍມີອາການວິນຫົວ</option>
+          <option value="wrong2">ຂ້ອຍຂໍເມນູແນ່ໄດ້ບໍ?</option>
+        </select>
+      </div>
+
+      <div>
+        <p>4. You need rest</p>
+        <select id="q4">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong">ຂ້ອຍຢາກສັ່ງ...</option>
+          <option value="wrong2">ຂ້ອຍມີອາການວິນຫົວ</option>
+          <option value="correct">ເຈົ້າຕ້ອງການພັກຜ່ອນ</option>
+        </select>
+      </div>
+
+      <button onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const correct1 = document.getElementById("q1").value === "correct";
+        const correct2 = document.getElementById("q2").value === "correct";
+        const correct3 = document.getElementById("q3").value === "correct";
+        const correct4 = document.getElementById("q4").value === "correct";
+
+        if (correct1 && correct2 && correct3 && correct4) {
+          alert("Excellent! ✅ All answers are correct.");
+        } else {
+          alert("Oops! ❌ Some answers are incorrect. Please try again.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

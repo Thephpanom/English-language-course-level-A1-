@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 3: Talking About Family</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background: linear-gradient(to bottom, #bbdefb, #ffffff);
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #1976d2;
+    }
+    .exercise-box {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+
+  <div class="container">
+    <h1>Exercise 3: Talking About Family</h1>
+    <p><strong>Lao:</strong> ຝຶກຫັດບົດທີ 3: ເວົ້າກ່ຽວກັບຄອບຄົວ</p>
+
+    <div class="exercise-box">
+      <h2>Match the English phrases with the correct Lao translation:</h2>
+
+      <div>
+        <p>1. Father</p>
+        <select id="q1">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ພໍ່</option>
+          <option value="wrong1">ແມ່</option>
+          <option value="wrong2">ນ້ອງສາວ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>2. Brother</p>
+        <select id="q2">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ແມ່</option>
+          <option value="correct">ອ້າຍ</option>
+          <option value="wrong2">ພໍ່</option>
+        </select>
+      </div>
+
+      <div>
+        <p>3. Sister</p>
+        <select id="q3">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ພໍ່</option>
+          <option value="correct">ນ້ອງສາວ</option>
+          <option value="wrong2">ອ້າຍ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>4. Family</p>
+        <select id="q4">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ອ້າຍ</option>
+          <option value="correct">ຄອບຄົວ</option>
+          <option value="wrong2">ແມ່</option>
+        </select>
+      </div>
+
+      <div>
+        <p>5. Mother</p>
+        <select id="q5">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ພໍ່</option>
+          <option value="correct">ແມ່</option>
+          <option value="wrong2">ນ້ອງສາວ</option>
+        </select>
+      </div>
+
+      <button onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const correct1 = document.getElementById("q1").value === "correct";
+        const correct2 = document.getElementById("q2").value === "correct";
+        const correct3 = document.getElementById("q3").value === "correct";
+        const correct4 = document.getElementById("q4").value === "correct";
+        const correct5 = document.getElementById("q5").value === "correct";
+
+        if (correct1 && correct2 && correct3 && correct4 && correct5) {
+          alert("Excellent! ✅ All answers are correct.\nດີຫຼາຍ! ຄຳຕອບທັງໝົດຖືກ.");
+        } else {
+          alert("Try again! ❌ Some answers are incorrect.\nລອງໃໝ່! ຄຳຕອບບາງອັນບໍ່ຖືກ.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

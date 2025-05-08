@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 9: Weather</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background: linear-gradient(to bottom, #81d4fa, #ffffff);
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #0288d1;
+    }
+    .exercise-box {
+      background: #b3e5fc;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #0288d1;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #026aa7;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+
+  <div class="container">
+    <h1>Exercise 9: Weather</h1>
+    <p><strong>Lao:</strong> ຝຶກຫັດບົດທີ 9: ອາກາດ</p>
+
+    <div class="exercise-box">
+      <h2>Match the English words with their Lao translations:</h2>
+
+      <div>
+        <p>1. Hot</p>
+        <select id="q1">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ຮ້ອນ</option>
+          <option value="wrong">ເຢັນ</option>
+          <option value="wrong2">ຝົນ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>2. Cold</p>
+        <select id="q2">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong">ແດງ</option>
+          <option value="wrong2">ຝົນ</option>
+          <option value="correct">ເຢັນ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>3. Rain</p>
+        <select id="q3">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ຝົນ</option>
+          <option value="wrong">ຮ້ອນ</option>
+          <option value="wrong2">ແດງ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>4. Sunny</p>
+        <select id="q4">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong">ເຢັນ</option>
+          <option value="correct">ແດງ</option>
+          <option value="wrong2">ຝົນ</option>
+        </select>
+      </div>
+
+      <button onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const correct1 = document.getElementById("q1").value === "correct";
+        const correct2 = document.getElementById("q2").value === "correct";
+        const correct3 = document.getElementById("q3").value === "correct";
+        const correct4 = document.getElementById("q4").value === "correct";
+
+        if (correct1 && correct2 && correct3 && correct4) {
+          alert("🎉 Excellent! All answers are correct.");
+        } else {
+          alert("❌ Some answers are incorrect. Try again.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

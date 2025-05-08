@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 4: Numbers and Age</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background: linear-gradient(to bottom, #ffe0b2, #ffffff);
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #ef6c00;
+    }
+    .exercise-box {
+      background: #ffcc80;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #ef6c00;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e65100;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+  
+  <div class="container">
+    <h1>Exercise 4: Numbers and Age</h1>
+    <p><strong>Lao:</strong> ຝຶກຫັດບົດທີ 4: ຕົວເລກ ແລະ ອາຍຸ</p>
+
+    <div class="exercise-box">
+      <h2>Match the English phrases with the correct Lao translation:</h2>
+
+      <div>
+        <p>1. One</p>
+        <select id="q1">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ໜຶ່ງ</option>
+          <option value="wrong1">ສອງ</option>
+          <option value="wrong2">ສາມ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>2. Two</p>
+        <select id="q2">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ໜຶ່ງ</option>
+          <option value="correct">ສອງ</option>
+          <option value="wrong2">ສາມ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>3. How old are you?</p>
+        <select id="q3">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ຂ້ອຍອາຍຸ 10 ປີ</option>
+          <option value="correct">ເຈົ້າອາຍຸທໍໃດ?</option>
+          <option value="wrong2">ຂ້ອຍອາຍຸ 12 ປີ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>4. I am ten years old</p>
+        <select id="q4">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ຂ້ອຍອາຍຸ 12 ປີ</option>
+          <option value="wrong2">ເຈົ້າອາຍຸທໍໃດ?</option>
+          <option value="correct">ຂ້ອຍອາຍຸ 10 ປີ</option>
+        </select>
+      </div>
+
+      <button onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const correct1 = document.getElementById("q1").value === "correct";
+        const correct2 = document.getElementById("q2").value === "correct";
+        const correct3 = document.getElementById("q3").value === "correct";
+        const correct4 = document.getElementById("q4").value === "correct";
+
+        if (correct1 && correct2 && correct3 && correct4) {
+          alert("Excellent! ✅ All answers are correct.\nດີຫຼາຍ! ຄຳຕອບທັງໝົດຖືກ.");
+        } else {
+          alert("Try again! ❌ Some answers are incorrect.\nລອງໃໝ່! ຄຳຕອບບາງອັນບໍ່ຖືກ.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background-color: #e6f2ff;
+      padding: 30px;
+    }
+    .form-container {
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      color: #004080;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+      margin-top: -8px;
+      margin-bottom: 10px;
+      display: none;
+    }
+    button {
+      background-color: #4da6ff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    section {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+  <section>
+    <img src="img/teacher.png" alt="teacher">
+  </section>
+
+    <h2 style="text-align: center; color: #004080;">
+    English Course Registration / ລົງທະບຽນຮຽນພາສາອັງກິດ
+    </h2>
+
+    <form id="registrationForm" class="form-container" novalidate>
+
+    <label for="name">Name and Surname / ຊື່ ແລະ ນາມສະກຸນ:</label>
+    <input type="text" id="name" name="name">
+    <div class="error" id="nameError">Please enter your name / ກະລຸນາໃສ່ຊື່</div>
+
+    <label for="dob">Date of Birth / ວັນເກີດ:</label>
+    <input type="date" id="dob" name="dob">
+    <div class="error" id="dobError">Please select your birth date / ເລືອກວັນເກີດ</div>
+
+    <label for="gender">Gender / ເພດ:</label>
+    <select id="gender" name="gender">
+        <option value="">-- Select Gender / ເລືອກເພດ --</option>
+        <option value="female">Female / ຍິງ</option>
+        <option value="male">Male / ຊາຍ</option>
+        <option value="other">Other / ອື່ນໆ</option>
+    </select>
+    <div class="error" id="genderError">Please choose gender / ເລືອກເພດ</div>
+
+    <label for="phone">Phone Number / ເບີໂທລະສັບ:</label>
+    <input type="tel" id="phone" name="phone" placeholder="ປ່ອນເລກໂທລະສັບ">
+    <div class="error" id="phoneError">Enter a valid 10-digit phone number / ໃສ່ເບີ 11 ໂຕ</div>
+
+    <label for="level">Level you want to study / ລະດັບທີ່ຕ້ອງການຮຽນ:</label>
+    <select id="level" name="level">
+        <option value="">-- Select Level / ເລືອກລະດັບ --</option>
+        <option value="A1">A1 - ເລີ່ມຕົ້ນ</option>
+        <option value="A2">A2 - ພື້ນຖານ</option>
+        <option value="B1">B1 - ປານກາງ</option>
+        <option value="B2">B2 - ສູງກວ່າປານກາງ</option>
+        <option value="C1">C1 - ຊັ້ນສູງ</option>
+        <option value="C2">C2 - ຊັ້ນຊໍານານ</option>
+    </select>
+    <div class="error" id="levelError">Please select a level / ເລືອກລະດັບຮຽນ</div>
+
+    <label for="goals">Goals of learning English / ເປົ້າໝາຍ:</label>
+    <textarea id="goals" name="goals" rows="4"></textarea>
+    <div class="error" id="goalsError">Please describe your goals / ອະທິບາຍເປົ້າໝາຍ</div>
+
+    <div style="text-align: center;">
+        <button type="submit">Submit / ສົ່ງຟອມ</button>
+    </div>
+
+    </form>
+
+    <footer>
+      <p>
+        <strong>Sponsored by: English language skills development project for Lao students.</strong> <br>
+        <strong>ສະໜັບສະໜູນໂດຍ: ໂຄງການພັດທະນາທັກສະພາສາອັງກິດໃຫ້ແກ່ນັກສຶກສາລາວ.</strong> <br>
+        &copy; 2025 THEP 27.
+      </p>
+      <p>
+        Contact information ຂໍ້ມູນຕິດຕໍ່.<br>
+        <a href="https://www.google.com">
+          <i class="bi bi-google"></i>Google.
+        </a>
+        <a href="https://maps.app.goo.gl/nM5Rge3nZFJphPLB9?g_st=iw">
+          <i class="bi bi-geo-alt"></i>Google Maps.
+        </a><br>
+        <a href="https://wa.me/85602098965578">
+          <i class="bi bi-whatsapp"></i>Whatsapp.
+        </a>
+        <a href="https://www.facebook.com/share/1NHHJK5kVB/?mibextid=wwXIfr">
+          <i class="bi bi-facebook"></i>Facebook.
+        </a>
+      </p>
+    </footer>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Get form values
+        const name = document.getElementById("name").value.trim();
+        const dob = document.getElementById("dob").value;
+        const gender = document.getElementById("gender").value;
+        const phone = document.getElementById("phone").value.trim();
+        const level = document.getElementById("level").value;
+        const goals = document.getElementById("goals").value.trim();
+
+        // Error tracking
+        let valid = true;
+
+        function showError(id, condition) {
+            const error = document.getElementById(id);
+            if (condition) {
+            error.style.display = "block";
+            valid = false;
+            } else {
+            error.style.display = "none";
+            }
+        }
+
+        showError("nameError", name === "");
+        showError("dobError", dob === "");
+        showError("genderError", gender === "");
+        showError("phoneError", !/^\d{11}$/.test(phone));
+        showError("levelError", level === "");
+        showError("goalsError", goals === "");
+
+        if (valid) {
+            alert("Form submitted successfully! / ສົ່ງຟອມສຳເລັດ");
+        }
+        });
+    </script>
+
+</body>
+</html>

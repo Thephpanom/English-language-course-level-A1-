@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 2: Introducing Yourself</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background: linear-gradient(to bottom, #f8bbd0, #ffffff);
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #c2185b;
+    }
+    .exercise-box {
+      background: #fce4ec;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #c2185b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #d81b60;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+
+  <div class="container">
+    <h1>Exercise 2: Introducing Yourself</h1>
+    <p><strong>Lao:</strong> ຝຶກຫັດບົດທີ 2: ແນະນໍາຕົນເອງ</p>
+
+    <div class="exercise-box">
+      <h2>Match the English phrases with the correct Lao translation:</h2>
+
+      <div>
+        <p>1. My name is...</p>
+        <select id="q1">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ຂ້ອຍຊື່...</option>
+          <option value="wrong1">ເຈົ້າຊື່ຫຍັງ?</option>
+          <option value="wrong2">ຂ້ອຍແມ່ນນັກຮຽນ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>2. What is your name?</p>
+        <select id="q2">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ຂ້ອຍແມ່ນນັກຮຽນ</option>
+          <option value="correct">ເຈົ້າຊື່ຫຍັງ?</option>
+          <option value="wrong2">ຍິນດີທີ່ໄດ້ພົບເຈົ້າ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>3. I am a student</p>
+        <select id="q3">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ເຈົ້າຊື່ຫຍັງ?</option>
+          <option value="correct">ຂ້ອຍແມ່ນນັກຮຽນ</option>
+          <option value="wrong2">ຂ້ອຍຊື່...</option>
+        </select>
+      </div>
+
+      <div>
+        <p>4. Nice to meet you</p>
+        <select id="q4">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ເຈົ້າຊື່ຫຍັງ?</option>
+          <option value="correct">ຍິນດີທີ່ໄດ້ພົບເຈົ້າ</option>
+          <option value="wrong2">ຂ້ອຍແມ່ນນັກຮຽນ</option>
+        </select>
+      </div>
+
+      <button onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const correct1 = document.getElementById("q1").value === "correct";
+        const correct2 = document.getElementById("q2").value === "correct";
+        const correct3 = document.getElementById("q3").value === "correct";
+        const correct4 = document.getElementById("q4").value === "correct";
+
+        if (correct1 && correct2 && correct3 && correct4) {
+          alert("Excellent! ✅ All answers are correct.\nດີຫຼາຍ! ຄຳຕອບທັງໝົດຖືກ.");
+        } else {
+          alert("Try again! ❌ Some answers are incorrect.\nລອງໃໝ່! ຄຳຕອບບາງອັນບໍ່ຖືກ.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

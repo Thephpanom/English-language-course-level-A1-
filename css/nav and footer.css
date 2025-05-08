@@ -1,0 +1,35 @@
+nav {
+    background-color: #2563eb;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    background-color: #1d4ed8;
+  }
+
+  footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+  }
+
+
+  i {
+    color: #f6029d;
+  }
+
+  a {
+    color: white;
+  }

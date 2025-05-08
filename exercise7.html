@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 7: Places in the City</title>
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background: linear-gradient(to bottom, #f1f8e9, #ffffff);
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #388e3c;
+    }
+    .exercise-box {
+      background: #c8e6c9;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    select {
+      margin-top: 5px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+  </nav>
+
+  <div class="container">
+    <h1>Exercise 7: Places in the City</h1>
+    <p><strong>Lao:</strong> ຝຶກຫັດບົດທີ 7: ສະຖານທີ່ໃນເມືອງ</p>
+
+    <div class="exercise-box">
+      <h2>Match the English words with the correct Lao translation:</h2>
+
+      <div>
+        <p>1. Market</p>
+        <select id="q1">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ຕະຫຼາດ</option>
+          <option value="wrong1">ສວນສາທາລະນະ</option>
+          <option value="wrong2">ໂຮງໝໍ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>2. School</p>
+        <select id="q2">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ຕະຫຼາດ</option>
+          <option value="correct">ໂຮງຮຽນ</option>
+          <option value="wrong2">ສວນສາທາລະນະ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>3. Hospital</p>
+        <select id="q3">
+          <option value="">-- Select Lao translation --</option>
+          <option value="correct">ໂຮງໝໍ</option>
+          <option value="wrong1">ໂຮງຮຽນ</option>
+          <option value="wrong2">ສວນສາທາລະນະ</option>
+        </select>
+      </div>
+
+      <div>
+        <p>4. Park</p>
+        <select id="q4">
+          <option value="">-- Select Lao translation --</option>
+          <option value="wrong1">ໂຮງໝໍ</option>
+          <option value="correct">ສວນສາທາລະນະ</option>
+          <option value="wrong2">ໂຮງຮຽນ</option>
+        </select>
+      </div>
+
+      <button onclick="checkAnswers()">Submit Answers</button>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        const correct1 = document.getElementById("q1").value === "correct";
+        const correct2 = document.getElementById("q2").value === "correct";
+        const correct3 = document.getElementById("q3").value === "correct";
+        const correct4 = document.getElementById("q4").value === "correct";
+
+        if (correct1 && correct2 && correct3 && correct4) {
+          alert("Excellent! ✅ All answers are correct.");
+        } else {
+          alert("Try again! ❌ Some answers are incorrect.");
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

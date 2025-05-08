@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Learning (A1) - Home</title>
+  <style>
+    body {
+      font-family: 'Phetsarath OT', sans-serif;
+      background-color: #f4f8ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #2563eb;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: #1d4ed8;
+    }
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #1e3a8a;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #bfdbfe;
+    }
+    .input-box {
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #2563eb;
+    }
+    .input-box:focus {
+      background-color: #e0f2fe;
+    }
+    footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 10px;
+    }
+
+
+    i {
+      color: #f6029d;
+    }
+
+    a {
+      color: white;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const dateStr = now.toLocaleDateString('lo-LA', options);
+      const timeStr = now.toLocaleTimeString('lo-LA');
+      document.getElementById('dateTimeBox').innerHTML = `${dateStr}<br>${timeStr}`;
+    }
+
+    setInterval(updateDateTime, 1000); 
+    updateDateTime(); 
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+
+<body><div id="dateTimeBox" style="position: absolute; top: 100px; right: 20px; background-color: white; padding: 5px 10px; border-radius: 8px; font-size: 14px; font-family: 'Phetsarath OT', sans-serif; box-shadow: 0 0 5px rgba(0,0,0,0.1);">ກຳລັງໂຫຼດ...</div>
+
+
+  <header>
+    <h1>English language course level (A1) - ຫຼັກສູດພາສາອັງກິດລະດັບ (A1)</h1>
+    <p>For beginners – ສໍາລັບຜູ້ເລີ່ມຕົ້ນ</p>
+  </header>
+
+  <nav>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="exercises.html">Exercises ແບບຝຶກຫັດ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+    <a href="Application for study.html">English Course Registration / ລົງທະບຽນຮຽນພາສາອັງກິດ</a>
+  </nav>
+
+  <main>
+
+    <section id="overview">
+      <h2>Course Overview – ພາບລວມຂອງຫຼັກສູດ</h2>
+      <p>Goal – ເປົ້າໝາຍ: Enable students to speak English in daily situations – ໃຫ້ນັກຮຽນສາມາດເວົ້າພາສາອັງກິດໃນສະຖານການປະຈໍາວັນ</p>
+      <p>Study Time – ເວລາຮຽນ: 3 hours/day, 5 days/week – 3 ຊົ່ວໂມງ/ມື້, 5 ມື້/ອາທິດ</p>
+    </section>
+
+    <section id="curriculum">
+      <h2>12-Week Curriculum – ແຜນການຮຽນ 12 ອາທິດ</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Week ອາທິດ</th>
+            <th>Main Topic ຫົວຂໍ້</th>
+            <th>Subtopics ຫົວຂໍ້ຍ່ອຍ</th>
+            <th>Skills ທັກສະ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Introduction – ແນະນໍາຕົວ</td><td>Name, Age, Country, Job – ຊື່, ອາຍຸ, ປະເທດ, ອາຊີບ</td><td>Listening, Speaking, Reading – ຟັງ, ເວົ້າ, ອ່ານ</td></tr>
+          <tr><td>2</td><td>Family – ຄອບຄົວ</td><td>Family members, Basic vocab – ສະມາຊິກຄອບຄົວ, ຄຳສັບພື້ນຖານ</td><td>Speaking, Writing – ເວົ້າ, ຂຽນ</td></tr>
+          <tr><td>3</td><td>Numbers & Time – ຕົວເລກ & ເວລາ</td><td>Time, Days – ເວລາ, ວັນ</td><td>Listening, Speaking – ຟັງ, ເວົ້າ</td></tr>
+          <tr><td>4</td><td>Classroom & School – ຫ້ອງຮຽນ & ໂຮງຮຽນ</td><td>Tools, Subjects, Activities – ອຸປະກອນ, ວິຊາ, ກິດຈະກຳ</td><td>Listening, Speaking, Reading – ຟັງ, ເວົ້າ, ອ່ານ</td></tr>
+          <tr><td>5</td><td>Daily Items – ຂອງໃຊ້ປະຈໍາວັນ</td><td>Personal things, Rooms – ສິ່ງສ່ວນຕົວ, ຫ້ອງ</td><td>Speaking, Reading – ເວົ້າ, ອ່ານ</td></tr>
+          <tr><td>6</td><td>Food & Drinks – ອາຫານ & ເຄື່ອງດື່ມ</td><td>Menu, Ordering, Tastes – ເມນູ, ການສັ່ງ, ລົດຊາດ</td><td>Listening, Speaking – ຟັງ, ເວົ້າ</td></tr>
+          <tr><td>7</td><td>Places in Town – ສະຖານທີ່ໃນເມືອງ</td><td>Asking Directions, Map – ຖາມທິດທາງ, ແຜນທີ່</td><td>Listening, Speaking – ຟັງ, ເວົ້າ</td></tr>
+          <tr><td>8</td><td>Shopping – ຊື້ເຄື່ອງ</td><td>Clothes, Prices, Size – ເຄື່ອງນຸ່ງຫົ່ມ, ລາຄາ, ຂະຫນາດ</td><td>Speaking, Writing – ເວົ້າ, ຂຽນ</td></tr>
+          <tr><td>9</td><td>Weather & Seasons – ສະພາບອາກາດ & ລະດູການ</td><td>Weather Q&A – ສະພາບອາກາດ ຖາມ-ຕອບ</td><td>Listening, Speaking – ຟັງ, ເວົ້າ</td></tr>
+          <tr><td>10</td><td>Basic Health – ສຸຂະພາບພື້ນຖານ</td><td>Symptoms, Visit Doctor – ອາການ, ໄປຫາໝໍ</td><td>Speaking, Reading – ເວົ້າ, ອ່ານ</td></tr>
+          <tr><td>11</td><td>Hobbies & Sports – ວຽກອະດິເລກ & ກິລາ</td><td>Leisure Activities – ກິດຈະກຳຍາມວ່າງ</td><td>Speaking, Listening – ເວົ້າ, ຟັງ</td></tr>
+          <tr><td>12</td><td>Review & Conversation – ທົບທວນ & ບົດສົນທະນາ</td><td>Real-life Situations – ສະຖານະການຊີວິດຈິງ</td><td>Speaking, Listening, Writing – ເວົ້າ, ຟັງ, ຂຽນ</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="website">
+      <h2>Website Structure – ໂຄງສ້າງເວັບໄຊທ໌</h2>
+      <ul>
+        <li>Lesson – ບົດຮຽນ (Vocabulary, Sentences, Exercises)</li>
+        <li>Conversation – ບົດສົນທະນາ (Videos, Practice)</li>
+        <li>Exercises – ແບບຝຶກຫັດ (Games, Fill-in, Tests)</li>
+        <li>Pronunciation & Listening – ການອອກສຽງ & ການຟັງ</li>
+        <li>Progress Tracker – ການຕິດຕາມຜົນການຮຽນ</li>
+      </ul>
+    </section>
+
+    <section id="daily">
+      <h2>Daily Learning Plan – ແຜນການຮຽນຮູ້ປະຈໍາວັນ</h2>
+      <table>
+        <tr><th>Time ເວລາ</th><th>Activity ກິດຈະກຳ</th></tr>
+        <tr><td>1 hour – 1 ຊົ່ວໂມງ</td><td>Learn new vocabulary and sentences – ຮຽນຄໍາສັບໃໝ່ ແລະ ປະໂຫຍກ</td></tr>
+        <tr><td>30 minutes – 30 ນາທີ</td><td>Listen and repeat conversations – ຟັງ ແລະ ຝຶກເວົ້າຕາມ</td></tr>
+        <tr><td>45 minutes – 45 ນາທີ</td><td>Do exercises – ເຮັດແບບຝຶກຫັດ</td></tr>
+        <tr><td>45 minutes – 45 ນາທີ</td><td>Practice real conversation – ຝຶກບົດສົນທະນາຈິງ</td></tr>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      <strong>Sponsored by: English language skills development project for Lao students.</strong> <br>
+      <strong>ສະໜັບສະໜູນໂດຍ: ໂຄງການພັດທະນາທັກສະພາສາອັງກິດໃຫ້ແກ່ນັກສຶກສາລາວ.</strong> <br>
+      &copy; 2025 THEP 27.
+    </p>
+    <p>
+      Contact information ຂໍ້ມູນຕິດຕໍ່.<br>
+      <a href="https://www.google.com">
+        <i class="bi bi-google"></i>Google.
+      </a>
+      <a href="https://maps.app.goo.gl/nM5Rge3nZFJphPLB9?g_st=iw">
+        <i class="bi bi-geo-alt"></i>Google Maps.
+      </a><br>
+      <a href="https://wa.me/85602098965578">
+        <i class="bi bi-whatsapp"></i>Whatsapp.
+      </a>
+      <a href="https://www.facebook.com/share/1NHHJK5kVB/?mibextid=wwXIfr">
+        <i class="bi bi-facebook"></i>Facebook.
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>

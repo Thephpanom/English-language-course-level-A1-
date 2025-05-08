@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercises – ແບບຝຶກຫັດ</title>
+  <link rel="stylesheet" href="css/stytles.css">
+  <link rel="stylesheet" href="css/nav and footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <header>
+    <h1>Exercises – ແບບຝຶກຫັດ</h1>
+    <p>Practice English through interactive exercises <br> ຝຶກພາສາອັງກິດຜ່ານບົດຝຶກຫັດແບບໂຕ້ຕອບ</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home ໜ້າຫຼັກ</a>
+    <a href="lessons.html">Lessons ບົດຮຽນ</a>
+    <a href="conversation.html">Conversation ບົດສົນທະນາ</a>
+    <a href="listening.html">Pronunciation & Listening ການອອກສຽງ & ການຟັງ</a>
+    <a href="progress.html">Progress Tracker ຕິດຕາມຜົນການຮຽນ</a>
+    <a href="Application for study.html">English Course Registration ລົງທະບຽນຮຽນພາສາອັງກິດ</a>
+  </nav>
+
+  <main>
+    <section id="exercise1">
+      <h2>Exercise 1: Fill in the Blank – ເຕີມຄຳ</h2>
+      <form id="form1">
+        <label for="name">My name is _______.</label>
+        <input type="text" id="name" name="name" required>
+      </form>
+    </section>
+
+    <section id="exercise2">
+      <h2>Exercise 2: Choose the Correct Answer – ເລືອກຄຳຕອບທີ່ຖືກ</h2>
+      <form id="form2">
+        <label>How old are you?</label><br>
+        <input type="radio" id="option1" name="age" value="20"> 20 old years<br>
+        <input type="radio" id="option2" name="age" value="25"> 25 years old<br>
+      </form>
+    </section>
+
+    <section id="exercise3">
+      <h2>Exercise 3: Match the Words – ຈັບຄູ່ຄຳສັບ</h2>
+      <ul>
+        <li>1. Apple –
+          <select id="match1">
+            <option value="">--ເລືອກ--</option>
+            <option>ເຂົ້າ</option>
+            <option>ໝາກແອັບເປີນ</option>
+            <option>ນ້ຳ</option>
+          </select>
+        </li>
+        <li>2. Water –
+          <select id="match2">
+            <option value="">--ເລືອກ--</option>
+            <option>ນ້ຳ</option>
+            <option>ປື້ມ</option>
+            <option>ເຂົ້າ</option>
+          </select>
+        </li>
+      </ul>
+    </section>
+
+    <section id="exercise4">
+      <h2>Exercise 4: Sentence Order – ຈັດລຽງປະໂຫຍກໃຫ້ຖືກ</h2>
+      <p>Rearrange these words to make a correct sentence:</p>
+      <p><strong>school / to / go / I</strong></p>
+      <form id="form4">
+        <label for="sentence">Your sentence:</label>
+        <input type="text" id="sentence" name="sentence" required placeholder="Type the correct sentence">
+      </form>
+    </section>
+    
+
+    <br>
+    <button onclick="checkAnswers()">Submit All</button>
+    <p id="result" style="font-weight: bold; font-size: 18px; color: green;"></p>
+  </main>
+
+  <script>
+    function checkAnswers() {
+    let score = 0;
+    let total = 5;
+
+    // Exercise 1: Fill in the blank
+    const nameInput = document.getElementById("name").value.trim().toLowerCase();
+    if (nameInput === "john") {
+      score++;
+    }
+
+    // Exercise 2: Radio choice
+    const radios = document.getElementsByName("age");
+    for (let radio of radios) {
+      if (radio.checked && radio.value === "25") {
+        score++;
+        break;
+      }
+    }
+
+    // Exercise 3: Matching
+    const match1 = document.getElementById("match1").value;
+    const match2 = document.getElementById("match2").value;
+
+    if (match1 === "ໝາກແອັບເປີນ") score++;
+    if (match2 === "ນ້ຳ") score++;
+
+    // Exercise 4: Sentence Order
+    const sentence = document.getElementById("sentence").value.trim().toLowerCase();
+    const correctSentences = ["i go to school", "i go school"];
+    if (correctSentences.includes(sentence)) {
+      score++;
+    }
+
+    // Show result
+    const resultText = "You scored " + score + " out of " + total;
+    document.getElementById("result").innerText = resultText;
+  }
+
+  </script>
+
+  <footer>
+    <p>
+      <strong>Sponsored by: English language skills development project for Lao students.</strong> <br>
+      <strong>ສະໜັບສະໜູນໂດຍ: ໂຄງການພັດທະນາທັກສະພາສາອັງກິດໃຫ້ແກ່ນັກສຶກສາລາວ.</strong> <br>
+      &copy; 2025 THEP 27.
+    </p>
+    <p>
+      Contact information ຂໍ້ມູນຕິດຕໍ່.<br>
+      <a href="https://www.google.com">
+        <i class="bi bi-google"></i>Google.
+      </a>
+      <a href="https://maps.app.goo.gl/nM5Rge3nZFJphPLB9?g_st=iw">
+        <i class="bi bi-geo-alt"></i>Google Maps.
+      </a><br>
+      <a href="https://wa.me/85602098965578">
+        <i class="bi bi-whatsapp"></i>Whatsapp.
+      </a>
+      <a href="https://www.facebook.com/share/1NHHJK5kVB/?mibextid=wwXIfr">
+        <i class="bi bi-facebook"></i>Facebook.
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
